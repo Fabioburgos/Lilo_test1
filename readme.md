@@ -31,4 +31,34 @@ This solution was developed as a technical challenge, demonstrating an elegant a
 
     *Example `input.csv` content:*
     ```csv
-    100,10,2
+    100,10,20,30,40,50
+    250,23,56,12,89,4,98
+    50,15,17,2,8,25
+    ```
+
+4.  **Execute the Script**: Run the `main.py` script from your terminal:
+    ```bash
+    python main.py
+    ```
+
+5.  **View the Output**: The script will print the results directly to the console.
+
+    *Example Output:*
+    ```
+    Processing 'data/input.csv'...
+    Row 1:
+      Selected Numbers: [10, 20, 30, 40]
+      Sum: 100
+
+    Row 2:
+      Selected Numbers: [23, 56, 12, 89, 4, 98]
+      Sum: 248
+
+    Row 3:
+      Selected Numbers: [15, 17, 8, 25]
+      Sum: 48
+    ```
+
+## Approach and Justification
+
+The chosen approach to solve this problem is **dynamic programming**, a well-suited technique for optimization challenges like the Subset Sum Problem. This method is considered the best fit because it guarantees finding the optimal solution by systematically exploring all valid combinations. Its main advantage is its correctness and efficiency given the problem's constraints (up to 12 "small numbers"). However, a potential limitation is its performance scalability; the memory and time required would increase significantly if the input lists were much larger, which might necessitate the use of approximation algorithms in a different context.
